@@ -12,3 +12,4 @@ tmp
 
 # Keys and stuff
 .env
+node_modules

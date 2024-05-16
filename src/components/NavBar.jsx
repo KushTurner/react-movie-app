@@ -24,8 +24,12 @@ export default function NavBar(props) {
       </div>
 
       <div className="flex flex-row gap-20 col-span-3 justify-center text-white">
-        <button className="hover:underline-offset-[17px] hover:underline">Favourites</button>
-        <button className="hover:underline-offset-[17px] hover:underline">Recommended</button>
+        <button className="hover:underline-offset-[17px] hover:underline">
+          Favourites
+        </button>
+        <button className="hover:underline-offset-[17px] hover:underline">
+          Recommended
+        </button>
       </div>
     </nav>
   );

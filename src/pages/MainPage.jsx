@@ -5,7 +5,7 @@ import { movies } from "../mocks/movies";
 import MovieCard from "../components/MovieCard";
 
 export default function MainPage() {
-  const moviesData = movies.Search
+  const moviesData = movies.Search;
 
   const [search, setSearch] = useState("");
   // const [movies, setMovies] = useState([]);
