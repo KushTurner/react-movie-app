@@ -13,3 +13,4 @@ tmp
 # Keys and stuff
 .env
 node_modules/
+src/.DS_STORE
