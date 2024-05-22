@@ -28,7 +28,7 @@ export default function MainPage() {
   return (
     <div>
       <NavBar>
-        <SearchBar searchValue={search} setSearchValue={setSearch} />
+        <SearchBar setSearchValue={setSearch} />
       </NavBar>
       <div className="flex flex-row">
         <div className="w-full flex flex-col">
