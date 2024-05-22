@@ -31,7 +31,7 @@ export default function MainPage() {
         <SearchBar setSearchValue={setSearch} />
       </NavBar>
       <div className="w-full flex flex-col">
-        <h1 className="mt-8 mb-6 ml-12 text-bold text-2xl text-white">
+        <h1 className="mt-8 mb-6 ml-12 text-bold text-2xl text-secondary">
           Movies
         </h1>
         <div className="grid grid-cols-5">

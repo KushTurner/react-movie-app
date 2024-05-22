@@ -48,8 +48,8 @@ export default function MovieCard(props) {
           </button>
         </div>
         <div className="relative top-[-20px] text-center">
-          <h1 className="text-sm text-white">{Title}</h1>
-          <p className="text-xs text-gray-400">{Year}</p>
+          <h1 className="text-sm text-secondary">{Title}</h1>
+          <p className="text-xs text-accent">{Year}</p>
         </div>
       </div>
     </div>

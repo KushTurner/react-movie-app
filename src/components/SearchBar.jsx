@@ -10,7 +10,7 @@ export default function SearchBar(props) {
           console.log(e.target.value);
         }} // TODO: Remove console.log
         type="search"
-        className="focus:outline-none focus:caret-white w-[60%] bg-[#FF424F] text-white placeholder:text-white hover:border-0"
+        className="focus:outline-none focus:caret-secondary w-[60%] bg-primary text-secondary placeholder:text-secondary"
         placeholder="Search Movie"
       />
     </>
