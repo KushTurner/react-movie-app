@@ -1,11 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { IoStar, IoStarOutline } from "react-icons/io5";
+import useFavouriteMovies from "../context/FavouriteMoviesContext";
 
 export default function MovieCard(props) {
-  const { movie } = props;
-  const [isFavourite, setIsFavourite] = useState(false);
+  const { Title, Year, Poster } = props.movie;
+  const [ isFavourite, setIsFavourite ] = useState(false);
+  const { favouriteMovies, addToFavourites, removeFromFavourites } = useFavouriteMovies();
+
+  useEffect(() => {
+    const movieIsInFavourites = favouriteMovies.find((movie) => movie.Title === Title);
+
+    if (movieIsInFavourites) {
+      setIsFavourite(true);
+    } else {
+      setIsFavourite(false);
+    }
+  }, [isFavourite, Title]);
 
   const handleClick = () => {
+    if (isFavourite) {
+      removeFromFavourites(props.movie);
+    } else {
+      addToFavourites(props.movie);
+    }
     setIsFavourite(!isFavourite);
   };
 
@@ -13,7 +30,7 @@ export default function MovieCard(props) {
     <div className="flex flex-col align-middle">
       <div className="self-center">
         <div className="flex flex-col items-center">
-          <img src={movie.Poster} className="w-48 h-[15rem] shadow-2xl" />
+          <img src={Poster} className="w-48 h-[15rem] shadow-2xl" />
           <button
             type="button"
             onClick={handleClick}
@@ -31,8 +48,8 @@ export default function MovieCard(props) {
           </button>
         </div>
         <div className="relative top-[-20px] text-center">
-          <h1 className="text-sm text-white">{movie.Title}</h1>
-          <p className="text-xs text-gray-400">{movie.Year}</p>
+          <h1 className="text-sm text-white">{Title}</h1>
+          <p className="text-xs text-gray-400">{Year}</p>
         </div>
       </div>
     </div>
