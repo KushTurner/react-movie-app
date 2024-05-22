@@ -14,5 +14,5 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 /* ONLY CHANGE FROM FROM BELOW THIS LINE */
 
 html {
-  background-color: #222B31
+  background-color: theme('colors.background')
 }
